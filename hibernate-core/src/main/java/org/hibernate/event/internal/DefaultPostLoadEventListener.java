@@ -60,11 +60,11 @@ public class DefaultPostLoadEventListener implements PostLoadEventListener {
 			entry.forceLocked( entity, nextVersion );
 		}
 		else if ( LockMode.OPTIMISTIC_FORCE_INCREMENT.equals( lockMode ) ) {
-			EntityIncrementVersionProcess incrementVersion = new EntityIncrementVersionProcess( entity, entry );
+			final EntityIncrementVersionProcess incrementVersion = new EntityIncrementVersionProcess( entity );
 			event.getSession().getActionQueue().registerProcess( incrementVersion );
 		}
 		else if ( LockMode.OPTIMISTIC.equals( lockMode ) ) {
-			EntityVerifyVersionProcess verifyVersion = new EntityVerifyVersionProcess( entity, entry );
+			final EntityVerifyVersionProcess verifyVersion = new EntityVerifyVersionProcess( entity );
 			event.getSession().getActionQueue().registerProcess( verifyVersion );
 		}
 
