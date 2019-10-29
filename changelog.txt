@@ -5,6 +5,12 @@ match the actual issue resolution (i.e. a bug might not be a bug). Please
 refer to the particular case on JIRA using the issue tracking number to learn
 more about each case.
 
+Changes in version 4.2.27-INFORM-1 (2019.10.29)
+------------------------------------------------------------------------------------------------------------------------
+
+** Bug
+    [HHH-13492] : OptimisticLockException after locking, refreshing, and updating an entity
+
 Changes in version 4.2.27 (2017.06.23)
 ------------------------------------------------------------------------------------------------------------------------
 
